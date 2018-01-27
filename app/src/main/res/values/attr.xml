@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="view_color" format="color"></attr>
+    <attr name="view_text" format="string"></attr>
+    <declare-styleable name="DateView">
+        <attr name="view_color"></attr>
+        <attr name="view_text"></attr>
+    </declare-styleable>
+</resources>

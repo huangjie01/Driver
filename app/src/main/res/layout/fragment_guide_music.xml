@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/music_localMusic"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/item_imageview_style"
+                android:src="@drawable/lay_icn_mobile" />
+
+            <TextView
+                style="@style/list_title_style"
+                android:text="本地音乐" />
+
+            <TextView
+                android:id="@+id/id_fragment_music_localmusNum"
+                style="@style/number_textstyle" />
+        </LinearLayout>
+
+        <View style="@style/item_divider_view">
+
+        </View>
+
+        <LinearLayout
+            android:id="@+id/music_recentMusic"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/item_imageview_style"
+                android:src="@drawable/lay_icn_time" />
+
+            <TextView
+                style="@style/list_title_style"
+                android:text="最近播放" />
+
+            <TextView
+                android:id="@+id/music_recentmusicNum"
+                style="@style/number_textstyle" />
+        </LinearLayout>
+
+        <View style="@style/item_divider_view"></View>
+
+        <LinearLayout
+            android:id="@+id/music_downMusic"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/item_imageview_style"
+                android:src="@drawable/lay_icn_dld" />
+
+            <TextView
+                style="@style/list_title_style"
+                android:text="下载管理" />
+
+            <TextView
+                android:id="@+id/id_fragment_music_downmusNum"
+                style="@style/number_textstyle" />
+        </LinearLayout>
+
+        <View style="@style/item_divider_view"></View>
+
+        <LinearLayout
+            android:id="@+id/music_mysonger"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/item_imageview_style"
+                android:src="@drawable/lay_icn_artist" />
+
+            <TextView
+                style="@style/list_title_style"
+                android:text="我的歌手" />
+
+            <TextView
+                android:id="@+id/id_fragment_music_mysongernum"
+                style="@style/number_textstyle" />
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>
