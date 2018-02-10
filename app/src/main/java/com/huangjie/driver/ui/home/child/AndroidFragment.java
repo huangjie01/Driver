@@ -166,6 +166,14 @@ public class AndroidFragment extends BaseFragment<FragmentAndroidBinding> implem
     }
 
     @Override
+    public void onStop() {
+        super.onStop();
+        if (mCompositeSubscription != null && mCompositeSubscription.isUnsubscribed()) {
+            mCompositeSubscription.unsubscribe();
+        }
+    }
+
+    @Override
     public void onRefresh() {
         mCurrentPage += 1;
         loadAndroidData();

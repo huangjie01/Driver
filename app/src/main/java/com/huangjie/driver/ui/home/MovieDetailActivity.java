@@ -6,9 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
-import android.view.View;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
@@ -24,7 +21,7 @@ import com.huangjie.driver.utils.ImageLoadUtils;
 import com.huangjie.driver.utils.LogUtils;
 import com.huangjie.driver.utils.StatusBarUtil;
 import com.huangjie.driver.utils.Utils;
-import com.huangjie.driver.view.MyNestedScrollView;
+import com.huangjie.driver.widget.MyNestedScrollView;
 
 import jp.wasabeef.glide.transformations.BlurTransformation;
 import rx.Subscriber;

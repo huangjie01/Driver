@@ -13,4 +13,5 @@ public class AlbumFragment extends BaseFragment<FragmentAlbumListBinding> {
     public int setContentView() {
         return R.layout.fragment_album_list;
     }
+
 }

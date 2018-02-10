@@ -44,6 +44,10 @@
             android:theme="@style/AppTheme">
 
         </activity>
+        <activity android:name=".ui.music.PlayMusicActivity"
+            android:theme="@style/AppTheme">
+
+        </activity>
     </application>
 
 </manifest>

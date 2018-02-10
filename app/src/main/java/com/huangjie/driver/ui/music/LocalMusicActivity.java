@@ -6,6 +6,12 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import com.huangjie.driver.R;
 import com.huangjie.driver.bean.music.MusicBean;
@@ -30,6 +36,34 @@ public class LocalMusicActivity extends AppCompatActivity {
         mBinder = DataBindingUtil.setContentView(this, R.layout.activity_music_local);
         initData();
         initView();
+        initEvent();
+    }
+
+
+    /**
+     * 处理事件
+     */
+    private void initEvent() {
+        mBinder.musicToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.action_more:
+                        Toast.makeText(getApplicationContext(), "正在开发中", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_search:
+                        Toast.makeText(getApplicationContext(), "正在开发中", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                return true;
+            }
+        });
+        mBinder.musicToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     /**
@@ -68,6 +102,13 @@ public class LocalMusicActivity extends AppCompatActivity {
         mBinder.musicTablayout.setupWithViewPager(mBinder.musicViewpager);
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.local_music, menu);
+        return true;
+    }
+
 
     /**
      * 初始化数据

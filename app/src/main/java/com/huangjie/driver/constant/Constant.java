@@ -12,4 +12,5 @@ public class Constant {
     public static final String SEND_DATA = "send_data";
     public static final int per_page_more = 20;
 
+    public static final String SEND_POSITION = "send_position";
 }

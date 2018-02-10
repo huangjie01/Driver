@@ -1,6 +1,7 @@
 package com.huangjie.driver.ui.music;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -15,6 +16,7 @@ import com.huangjie.driver.constant.Constant;
 import com.huangjie.driver.databinding.FragmentMusicListBinding;
 import com.huangjie.driver.utils.LogUtils;
 import com.huangjie.driver.utils.MusicUtil;
+import com.huangjie.driver.widget.SideBar;
 
 import java.util.ArrayList;
 
@@ -55,6 +57,13 @@ public class MusicFragment extends BaseFragment<FragmentMusicListBinding> {
     }
 
     @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+    }
+
+
+    @Override
     protected void handView() {
         super.handView();
 
@@ -66,7 +75,16 @@ public class MusicFragment extends BaseFragment<FragmentMusicListBinding> {
         mBindingView.musicListview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                PlayMusicActivity.launch(getContext(), mMusicList,position);
+            }
+        });
 
+        mBindingView.musicSidebar.setView(mBindingView.tvDialog);
+        mBindingView.musicSidebar.setSelected(false);
+        mBindingView.musicSidebar.setOnTouchingLetterChangedListener(new SideBar.OnTouchingLetterChangedListener() {
+            @Override
+            public void onTouchingLetterChanged(String s) {
+                mBindingView.musicSidebar.setSelected(s);
             }
         });
     }
@@ -100,8 +118,8 @@ public class MusicFragment extends BaseFragment<FragmentMusicListBinding> {
             transaction.remove(preview);
         }
         mMusicBottomSheet = new MusicBottomSheet();
-        Bundle bundle=new Bundle();
-        bundle.putParcelable(Constant.SEND_DATA,mMusicList.get(position));
+        Bundle bundle = new Bundle();
+        bundle.putParcelable(Constant.SEND_DATA, mMusicList.get(position));
         mMusicBottomSheet.setArguments(bundle);
         mMusicBottomSheet.show(mManager, "MusicBottomSheet");
     }

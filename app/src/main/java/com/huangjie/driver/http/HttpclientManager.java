@@ -2,7 +2,6 @@ package com.huangjie.driver.http;
 
 import com.huangjie.driver.http.api.DouBanApi;
 import com.huangjie.driver.http.api.GankApi;
-import com.huangjie.driver.utils.LogUtils;
 import com.huangjie.driver.utils.NetworkUtils;
 import com.huangjie.driver.utils.Utils;
 

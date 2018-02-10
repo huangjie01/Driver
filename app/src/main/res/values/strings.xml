@@ -11,4 +11,6 @@
     <string name="show_data">上映日期: </string>
     <string name="made_country">制片国家/地区： </string>
     <string name="local_music">本地音乐</string>
+    <string name="more">更多</string>
+    <string name="share">分享</string>
 </resources>

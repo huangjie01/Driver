@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.huangjie.driver.view.MyNestedScrollView
+        <com.huangjie.driver.widget.MyNestedScrollView
             android:id="@+id/nsv_scrollview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -150,7 +150,7 @@
 
             </LinearLayout>
 
-        </com.huangjie.driver.view.MyNestedScrollView>
+        </com.huangjie.driver.widget.MyNestedScrollView>
 
 
         <android.support.v7.widget.Toolbar

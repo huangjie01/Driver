@@ -1,18 +1,15 @@
-package com.huangjie.driver.view;
+package com.huangjie.driver.widget;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
-import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.BottomSheetDialog;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import com.huangjie.driver.R;
 import com.huangjie.driver.utils.Utils;
