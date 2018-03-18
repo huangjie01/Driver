@@ -20,6 +20,8 @@ import com.huangjie.driver.widget.SideBar;
 
 import java.util.ArrayList;
 
+import javax.net.ssl.HttpsURLConnection;
+
 
 /**
  * Created by huangjie on 2017/8/9.
@@ -30,6 +32,7 @@ public class MusicFragment extends BaseFragment<FragmentMusicListBinding> {
     private MusicAdapter mMusicAdapter;
     private MusicBottomSheet mMusicBottomSheet;
     private FragmentManager mManager;
+
 
     @Override
     public int setContentView() {

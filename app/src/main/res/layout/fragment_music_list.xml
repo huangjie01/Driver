@@ -10,7 +10,9 @@
             android:id="@+id/music_listview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:divider="@null"></ListView>
+            android:divider="@null">
+
+        </ListView>
 
         <com.huangjie.driver.widget.SideBar
             android:id="@+id/music_sidebar"

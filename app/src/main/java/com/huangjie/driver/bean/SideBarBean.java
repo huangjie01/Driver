@@ -7,6 +7,8 @@ import android.widget.ImageView;
 
 import com.huangjie.driver.utils.ResUtils;
 
+import java.util.ArrayList;
+
 /**
  * Created by huangjie on 2017/1/21.
  */
